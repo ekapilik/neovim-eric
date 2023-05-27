@@ -44,20 +44,15 @@ function M.setup()
       end,
     }
 
-    -- Startup screen
-    --use {
-    --  "goolord/alpha-nvim.nvim",
-    --  --config = function()
-    --    --require{"config.alpha"}.setup()
-    --  --end,
-    --}
+    -- Devicons
     use 'nvim-tree/nvim-web-devicons'
+
+    ---- Alpha splash screen
     use {
-      'goolord/alpha-nvim',
-      requires = { 'nvim-tree/nvim-web-devicons' },
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.startify'.config)
-      end
+      "goolord/alpha-nvim",
+      config = function()
+        require("config.alpha").setup()
+      end,
     }
 
     -- Neogit
