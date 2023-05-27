@@ -40,3 +40,6 @@ vim.opt.shiftwidth = 2    -- Set indent width
 
 -- Set text width
 vim.bo.textwidth = 120
+
+-- Time in milliseconds to wait for a mapped sequence to complete.
+opt.timeoutlen = 300
