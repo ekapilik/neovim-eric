@@ -33,3 +33,10 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
+
+-- Markdown Preview
+-- example
+keymap('n', '<C-s>', '<Plug>MarkdownPreview', {})
+keymap('n', '<M-s>', '<Plug>MarkdownPreviewStop', {})
+keymap('n', '<C-p>', '<Plug>MarkdownPreviewToggle', {})
+
