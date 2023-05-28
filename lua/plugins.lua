@@ -132,18 +132,18 @@ function M.setup()
       requires = { "nvim-web-devicons" },
     }
 
-    -- nvim-navic
-    use {
-      use "SmiteshP/nvim-navic.nvim",
-      --requires = "neovim/nvim-lspconfig"
-    }
-
-    -- Tree sitter
+    -- Tree sitter (syntax highlighting)
     use {
      "nvim-treesitter/nvim-treesitter",
       config = function()
         require("config.treesitter").setup()
       end,
+    }
+
+    -- fzf fuzzy file finder
+    use {
+     "ibhagwan/fzf-lua",
+      requires = { "kyazdani42/nvim-web-devicons" },
     }
 
     -- ---------------------------------------------

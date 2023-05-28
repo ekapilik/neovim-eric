@@ -43,3 +43,10 @@ vim.bo.textwidth = 120
 
 -- Time in milliseconds to wait for a mapped sequence to complete.
 opt.timeoutlen = 300
+
+-- Search paths
+opt.path:remove "/usr/include"
+opt.path:append "**"
+
+-- wildignore
+opt.wildignorecase = true
