@@ -122,6 +122,30 @@ function M.setup()
       cmd = { "MarkdownPreview" },
     }
 
+    -- Lualine
+    use {
+      "nvim-lualine/lualine.nvim",
+      event = "VimEnter",
+      config = function()
+        require("config.lualine").setup()
+      end,
+      requires = { "nvim-web-devicons" },
+    }
+
+    -- nvim-navic
+    use {
+      use "SmiteshP/nvim-navic.nvim",
+      --requires = "neovim/nvim-lspconfig"
+    }
+
+    -- Tree sitter
+    use {
+     "nvim-treesitter/nvim-treesitter",
+      config = function()
+        require("config.treesitter").setup()
+      end,
+    }
+
     -- ---------------------------------------------
     -- ------------------ RESTART ------------------
     -- ---------------------------------------------
