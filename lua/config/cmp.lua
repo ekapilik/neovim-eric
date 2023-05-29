@@ -75,6 +75,7 @@ function M.setup()
       }),
     },
     sources = {
+      { name = "nvim_lsp" },
       { name = "treesitter" },
       { name = "buffer" },
       { name = "luasnip" },
@@ -84,10 +85,15 @@ function M.setup()
       { name = "emoji" },
       { name = "calc" },
     },
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "NormalFloat:NormalFloat,FloatBorder:TelescopeBorder",
-    },
+    window = {
+      documentation = cmp.config.window.bordered()
+      --{
+      --  border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      --  max_height = 24,
+      --  max_width = 106,
+      --  winhighlight = "FloatBorder:NormalFloat"
+      --}
+    }
   }
 
   -- Use buffer source for `/`
@@ -97,14 +103,15 @@ function M.setup()
     },
   })
 
+  -- Remove auto suggest for command line
   -- Use cmdline & path source for ':'
-  cmp.setup.cmdline(":", {
-    sources = cmp.config.sources({
-      { name = "path" },
-    }, {
-      { name = "cmdline" },
-    }),
-  })
+  --cmp.setup.cmdline(":", {
+  --  sources = cmp.config.sources({
+  --    { name = "path" },
+  --  }, {
+  --    { name = "cmdline" },
+  --  }),
+  --})
 end
 
 return M

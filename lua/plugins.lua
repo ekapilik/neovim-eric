@@ -193,6 +193,7 @@ function M.setup()
         "hrsh7th/cmp-calc",
         "f3fora/cmp-spell",
         "hrsh7th/cmp-emoji",
+        "hrsh7th/cmp-nvim-lsp",
         {
           "L3MON4D3/LuaSnip",
           wants = "friendly-snippets",
@@ -202,6 +203,22 @@ function M.setup()
         },
         "rafamadriz/friendly-snippets",
         disable = false,
+      },
+    }
+
+    -- LSP
+    use {
+      "neovim/nvim-lspconfig",
+      opt = true,
+      event = "BufReadPre",
+      -- wants = { "nvim-lsp-installer" },
+      wants = { "cmp-nvim-lsp", "nvim-lsp-installer", "lsp_signature.nvim" },
+      config = function()
+        require("config.lsp").setup()
+      end,
+      requires = {
+        "williamboman/nvim-lsp-installer",
+        "ray-x/lsp_signature.nvim",
       },
     }
 
