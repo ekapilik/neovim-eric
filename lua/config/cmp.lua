@@ -105,13 +105,13 @@ function M.setup()
 
   -- Remove auto suggest for command line
   -- Use cmdline & path source for ':'
-  --cmp.setup.cmdline(":", {
-  --  sources = cmp.config.sources({
-  --    { name = "path" },
-  --  }, {
-  --    { name = "cmdline" },
-  --  }),
-  --})
+  cmp.setup.cmdline(":", {
+    sources = cmp.config.sources({
+      { name = "path" },
+    }, {
+      { name = "cmdline" },
+    }),
+  })
 end
 
 return M

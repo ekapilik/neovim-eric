@@ -6,6 +6,7 @@ local servers = {
   cmake = {},
   dockerls = {},
   jsonls = {},
+  sumneko_lua = {},
   marksman = {},
   pyright = {},
   lemminx = {},
