@@ -230,6 +230,13 @@ function M.setup()
         "ray-x/lsp_signature.nvim",
       },
     }
+    
+    -- GitHub Co-Pilot
+    use { "github/copilot.vim" 
+   -- config = function()
+   --   require("config.copilot")
+   -- end,
+    }
 
     --------------------------------------------
     ----------------- RESTART ------------------
