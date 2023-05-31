@@ -167,21 +167,21 @@ function M.setup()
      end,
     }
 
-    -- Completion
-    use {
-      "ms-jpq/coq_nvim",
-      branch = "coq",
-      event = "InsertEnter",
-      run = ":COQdeps",
-      config = function()
-        require("config.coq").setup()
-      end,
-      requires = {
-        { "ms-jpq/coq.artifacts", branch = "artifacts" },
-        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
-      },
-      disable = false,
-    }
+    ---- Completion
+    --use {
+    --  "ms-jpq/coq_nvim",
+    --  branch = "coq",
+    --  event = "InsertEnter",
+    --  run = ":COQdeps",
+    --  config = function()
+    --    require("config.coq").setup()
+    --  end,
+    --  requires = {
+    --    { "ms-jpq/coq.artifacts", branch = "artifacts" },
+    --    { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
+    --  },
+    --  disable = false,
+    --}
 
     -- nvim-cmp
     use {
@@ -232,10 +232,10 @@ function M.setup()
     }
     
     -- GitHub Co-Pilot
-    use { "github/copilot.vim" 
-   -- config = function()
-   --   require("config.copilot")
-   -- end,
+    use { "github/copilot.vim",
+      config = function()
+        require("config.copilot")
+      end,
     }
 
     --------------------------------------------

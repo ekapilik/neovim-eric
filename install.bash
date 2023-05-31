@@ -10,8 +10,8 @@ export NVIM_ERIC_NVIM=$NVIM_ERIC/nvim
 mkdir -p $NVIM_ERIC_SHARE
 mkdir -p $NVIM_ERIC_NVIM
 
-pushd $(dirname "${BASH_SOURCE[0]}") >/dev/null
+pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null || exit
 stow --restow --target="$NVIM_ERIC_NVIM" . 
-popd >/dev/null
+popd >/dev/null || exit
 
 alias nv='XDG_DATA_HOME=$NVIM_ERIC_SHARE XDG_CONFIG_HOME=$NVIM_ERIC nvim'
