@@ -82,6 +82,13 @@ function M.setup()
           fallback()
         end
       end),
+      ["<C-k>"] = cmp.mapping(function(fallback)
+        vim.cmd("stopinsert")
+        vim.cmd("Copilot panel")
+      end, {
+        "i",
+        "s",
+      }),
     },
     sources = {
       { name = "nvim_lsp" },

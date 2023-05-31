@@ -2,7 +2,11 @@ local M = {}
 
 local servers = {
   bashls = {},
-  clangd = {},
+  clangd = {
+     capabilities = {
+      offsetEncoding = "utf-8"
+    }
+  },
   cmake = {},
   dockerls = {},
   jsonls = {},
