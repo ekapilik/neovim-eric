@@ -40,3 +40,5 @@ keymap('n', '<C-s>', '<Plug>MarkdownPreview', {})
 keymap('n', '<M-s>', '<Plug>MarkdownPreviewStop', {})
 keymap('n', '<C-p>', '<Plug>MarkdownPreviewToggle', {})
 
+-- Insert mode mapping: jj to <Esc>
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { silent = true })
