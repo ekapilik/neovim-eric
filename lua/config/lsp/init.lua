@@ -1,5 +1,6 @@
 local M = {}
 
+-- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
   bashls = {},
   clangd = {
@@ -10,8 +11,14 @@ local servers = {
   cmake = {},
   dockerls = {},
   jsonls = {},
-  sumneko_lua = {},
-  marksman = {},
+  --sumneko_lua = {},
+  --lua_ls = {
+  --  Lua = {
+  --    workspace = { checkThirdParty = false },
+  --    telemetry = { enable = false },
+  --  }
+  --},
+  prosemd_lsp = {},
   pyright = {},
   lemminx = {},
   yamlls = {}
