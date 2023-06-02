@@ -121,7 +121,7 @@ function M.setup()
         require("lightspeed").setup {}
       end,
     }
-		
+
     -- Markdown
     use {
       "iamcco/markdown-preview.nvim",
@@ -151,6 +151,10 @@ function M.setup()
     }
 
     -- fzf fuzzy file finder
+    use { "junegunn/fzf",
+      run = './install --bin',
+    }
+
     use {
      "ibhagwan/fzf-lua",
       requires = { "kyazdani42/nvim-web-devicons" },
@@ -230,7 +234,7 @@ function M.setup()
         "ray-x/lsp_signature.nvim",
       },
     }
-    
+
     -- GitHub Co-Pilot
     use { "github/copilot.vim",
       config = function()
